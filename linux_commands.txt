@@ -1,0 +1,144 @@
+🗂️ 1. File & Directory Management
+Command	Example	Description
+ls	ls -l	List files (long format)
+cd	cd /home/user/docs	Change directory
+pwd	pwd	Print working directory
+mkdir	mkdir new_folder	Create new directory
+rmdir	rmdir empty_folder	Remove empty directory
+rm	rm file.txt	Delete file
+rm -r	rm -r folder	Delete directory recursively
+cp	cp file1.txt file2.txt	Copy file
+cp -r	cp -r dir1 dir2	Copy directory recursively
+mv	mv oldname.txt newname.txt	Move or rename file
+touch	touch file.txt	Create empty file
+find	find . -name "*.txt"	Find files matching pattern
+basename	basename /path/file.txt	Show filename only
+dirname	dirname /path/file.txt	Show directory only
+tree	tree	Show directory structure (requires tree)
+
+📄 2. File Viewing & Manipulation
+Command	Example	Description
+cat	cat file.txt	View file contents
+less	less bigfile.txt	View large file, scrollable
+more	more file.txt	View file, page by page
+head	head -n 10 file.txt	First 10 lines
+tail	tail -n 10 file.txt	Last 10 lines
+cut	cut -d',' -f1 file.csv	Extract field from CSV
+sort	sort file.txt	Sort lines
+uniq	uniq file.txt	Remove duplicate lines
+wc	wc -l file.txt	Count lines
+split	split -b 1M file bigfile_part_	Split large file
+diff	diff file1 file2	Compare two files
+cmp	cmp file1 file2	Compare bytes
+
+🔍 3. Searching & Text Processing
+Command	Example	Description
+grep	grep "error" logfile	Search for string
+egrep	`egrep "warn	error"`
+awk	awk '{print $1}' file	Pattern scanning
+sed	sed 's/old/new/g' file	Find and replace text
+xargs	`find . -name "*.log"	xargs rm`
+locate	locate filename	Fast file search
+find	find / -type f -name "*.sh"	Recursive file search
+basename	basename /path/file.txt	Extract filename
+dirname	dirname /path/file.txt	Extract directory
+
+⚙️ 4. System Info & Monitoring
+Command	Example	Description
+top	top	Real-time system monitor
+htop	htop	Interactive process viewer
+uptime	uptime	System uptime
+free	free -m	Memory usage
+df	df -h	Disk space usage
+du	du -sh folder/	Folder size
+vmstat	vmstat 1	Memory, CPU stats
+iostat	iostat	CPU and I/O stats
+lscpu	lscpu	CPU info
+lsblk	lsblk	Block devices
+dmesg	`dmesg	tail`
+uptime	uptime	Load averages
+uname -a	uname -a	System info
+
+🔐 5. Permissions & Ownership
+Command	Example	Description
+chmod	chmod 755 file	Change permissions
+chown	chown user:group file	Change ownership
+umask	umask 022	Default permission mask
+stat	stat file	Detailed file info
+ls -l	ls -l	View permissions
+getfacl	getfacl file	View ACLs
+setfacl	setfacl -m u:john:r file	Modify ACLs
+
+🌐 6. Networking
+Command	Example	Description
+ping	ping google.com	Test connection
+curl	curl http://example.com	Fetch URL
+wget	wget http://example.com/file	Download file
+ip a	ip a	Show IP addresses
+netstat -tulnp	netstat -tulnp	Show open ports (deprecated)
+ss -tuln	ss -tuln	Modern netstat
+traceroute	traceroute google.com	Route to host
+nslookup	nslookup example.com	DNS lookup
+dig	dig example.com	DNS tool
+hostname	hostname -I	Show local IP
+scp	scp file user@host:/path	Secure copy
+rsync	rsync -av file user@host:/path	Fast sync
+telnet	telnet host port	Test TCP port
+nmap	nmap -sT -p 22 host	Port scan
+
+👤 7. User Management
+Command	Example	Description
+whoami	whoami	Current user
+id	id	User ID and groups
+adduser	adduser john	Add user
+passwd	passwd john	Change password
+su	su -	Switch to root
+sudo	sudo apt update	Run command as root
+groups	groups john	Show user's groups
+who	who	Who is logged in
+w	w	Logged-in users & load
+
+💡 8. Process Management
+Command	Example	Description
+ps	ps aux	List all processes
+kill	kill 1234	Kill process by PID
+killall	killall firefox	Kill by name
+nice	nice -n 10 command	Run with priority
+renice	renice -n 5 -p 1234	Change running priority
+bg	bg	Resume job in background
+fg	fg	Bring background job to front
+jobs	jobs	Show background jobs
+
+🧪 9. Package Management (Debian/Ubuntu)
+Command	Example	Description
+apt update	sudo apt update	Update package list
+apt upgrade	sudo apt upgrade	Upgrade installed packages
+apt install	sudo apt install vim	Install a package
+apt remove	sudo apt remove vim	Remove package
+dpkg -i	dpkg -i pkg.deb	Install .deb package
+dpkg -l	dpkg -l	List installed packages
+
+🔄 10. Disk & Mounts
+Command	Example	Description
+mount	mount /dev/sdb1 /mnt	Mount disk
+umount	umount /mnt	Unmount disk
+df -h	df -h	Disk usage (human-readable)
+du -sh	du -sh *	File/dir sizes
+lsblk	lsblk	List block devices
+blkid	blkid	UUID info of partitions
+fdisk	fdisk -l	Partition table viewer
+
+🛠️ 11. Scripting & Misc
+Command	Example	Description
+alias	alias ll='ls -la'	Create command alias
+env	env	Show environment variables
+export	export VAR=value	Set env variable
+date	date +"%Y-%m-%d"	Show date/time
+cal	cal	Calendar
+sleep	sleep 5	Pause for 5 seconds
+history	`history	grep ssh`
+crontab	crontab -e	Edit cron jobs
+at	at now + 1 minute	Schedule one-time task
+shutdown	shutdown -h now	Shutdown system
+reboot	reboot	Restart system
+man	man ls	Show manual page
